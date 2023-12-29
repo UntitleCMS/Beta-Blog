@@ -1,0 +1,13 @@
+{
+  "name": "beta-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sudo docker compose up || docker compose up ",
+    "replace": "sudo docker compose up --force-recreate -d || docker compose up --force-recreate -d"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+
+  gateway:
+    image: villsource/gateway
+    networks:
+      - service 
+    environment:
+        AUTH_ISSUER: https://localhost/api/auth/v2
+        ASPNETCORE_URLS: http://+:80;https://+:443
+        ASPNETCORE_ENVIRONMENT: Development
+    volumes:
+        - ./Ocelot:/app/Ocelot
+        - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+        - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+    ports:
+      - 80:80
+      - 443:443

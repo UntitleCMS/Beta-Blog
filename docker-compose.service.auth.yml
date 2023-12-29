@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  authenticationservice:
+    image: villsource/authenticationservice:v2
+    environment: 
+      DB_CONNECTION_STRING: Server=sql-server;Database=authentication;User=sa;Password=P@ssword;TrustServerCertificate=True;
+      ASPNETCORE_URLS: http://+:80
+    networks:
+      - service
+    depends_on:
+      - sql-server

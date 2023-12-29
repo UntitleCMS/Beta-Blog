@@ -1,0 +1,42 @@
+version: '3.4'
+
+services:
+
+  python-slave:
+    image: python-slave
+    build:
+      context: ./CompilerContainer
+      dockerfile: Python.Dockerfile
+    environment:
+      USER_NAME: runner
+    volumes:
+      - ./CompilerContainer/Keys:/config/.ssh
+      - ./CompilerContainer/SourceCode:/config/sourcecode
+    networks:
+      - runner
+
+  java-slave:
+    image: java-slave
+    build:
+      context: ./CompilerContainer
+      dockerfile: Java.Dockerfile
+    environment:
+      USER_NAME: runner
+    volumes:
+      - ./CompilerContainer/Keys:/config/.ssh
+      - ./CompilerContainer/SourceCode:/config/sourcecode
+    networks:
+      - runner
+
+  gcc-slave:
+    image: gcc-slave
+    build:
+      context: ./CompilerContainer
+      dockerfile: GCC.Dockerfile
+    environment:
+      USER_NAME: runner
+    volumes:
+      - ./CompilerContainer/Keys:/config/.ssh
+      - ./CompilerContainer/SourceCode:/config/sourcecode
+    networks:
+    - runner

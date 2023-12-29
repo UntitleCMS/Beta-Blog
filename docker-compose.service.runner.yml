@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+
+  coderunnerservice:
+    image: villsource/coderunnerservice
+    environment:
+      CODE_REPO: /sourcecodes
+      SLAVE_USER_NAME: runner
+      SLAVE_HOST_PYTHON: python-slave
+      SLAVE_HOST_JAVA: java-slave
+      SLAVE_HOST_GCC: gcc-slave
+    volumes:
+      - ./CompilerContainer/Keys:/keys
+      - ./CompilerContainer/SourceCode:/sourcecodes
+    networks:
+      - service
+      - runner
+    ports:
+      - 3000:3000

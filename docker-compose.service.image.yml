@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+
+  picturestorageservice:
+    image: villsource/picturestorageservice
+    environment:
+      DB_CONNECTION_STRING: mongodb://mongo1:50001/pictures?replicaSet=my-mongo-set
+      ASPNETCORE_URLS: http://+:80
+    volumes:
+      - ./img-storage:/img-storage
+    depends_on:
+      - mongo1
+    networks:
+      - service

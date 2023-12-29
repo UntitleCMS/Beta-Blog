@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+
+  frontend:
+    image: villsource/beta-blog:v2
+    networks:
+      - service

@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  userinfo:
+    image: villsource/userinfo
+    environment:
+        - DB_CONNECTION_STRING=mongodb://mongo1:50001/comment?replicaSet=my-mongo-set
+    networks:
+        - service
+  
