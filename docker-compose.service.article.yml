@@ -2,9 +2,10 @@ version: '3.4'
 
 services:
 
-  # TODO: Need to ENV Connection String
   articleservice:
     image: villsource/articleservice
+    environment:
+      - DB_CONNECTION_STRING=mongodb://mongo1:50001/comment?replicaSet=my-mongo-set
     networks:
       - service
     depends_on:
