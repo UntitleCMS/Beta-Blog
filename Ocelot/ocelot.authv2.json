@@ -12,6 +12,8 @@
       "UpstreamPathTemplate": "/api/auth/v2/",
       "UpstreamHeaderTransform": {
         "X-Forwarded-For": "{RemoteIpAddress}",
+        // "X-Forwarded-Host": "p.villsource.tk",
+        // "X-Forwarded-Host": "local.villsource.tk",
         "X-Forwarded-Host": "localhost",
         "X-Forwarded-Proto": "https"
       }
@@ -30,6 +32,8 @@
       "UpstreamPathTemplate": "/api/auth/v2/{url}",
       "UpstreamHeaderTransform": {
         "X-Forwarded-For": "{RemoteIpAddress}",
+        // "X-Forwarded-Host": "p.villsource.tk",
+        // "X-Forwarded-Host": "local.villsource.tk",
         "X-Forwarded-Host": "localhost",
         "X-Forwarded-Proto": "https"
       }
@@ -48,6 +52,8 @@
       "UpstreamHeaderTransform": {
         "X-Forwarded-For": "{RemoteIpAddress}",
         "X-Forwarded-Host": "localhost",
+        // "X-Forwarded-Host": "p.villsource.tk",
+        // "X-Forwarded-Host": "local.villsource.tk",
         "X-Forwarded-Proto": "https"
       }
     }
