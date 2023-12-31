@@ -12,8 +12,8 @@ services:
     environment:
       MONGO_INITDB_DATABASE: admin
       IS_PRIMARY: true
-    ports:
-      - 50001:50001
+    # ports:
+      # - 50001:50001
     command: bash /scripts/endpoint.sh
     networks:
       - service
