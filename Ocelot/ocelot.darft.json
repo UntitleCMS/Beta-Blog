@@ -1,0 +1,23 @@
+{
+  "Routes": [
+    // Get Articles with authorize
+    {
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "articleservice",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/darfts",
+      "UpstreamPathTemplate": "/api/article/v1/darfts",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "OpenIddict.Validation.AspNetCore"
+      },
+      "AddQueriesToRequest": {
+        "sub": "Claims[sub-b64] > value"
+      }
+    }
+  ]
+}
