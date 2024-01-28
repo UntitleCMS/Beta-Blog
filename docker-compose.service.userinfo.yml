@@ -5,6 +5,7 @@ services:
     image: villsource/userinfo
     environment:
         - DB_CONNECTION_STRING=mongodb://mongo1:50001/comment?replicaSet=my-mongo-set
+        - MQ_CONNECTION_STRING=amqp://guest:guest@rabit-mq:5672
     networks:
         - service
   

@@ -6,6 +6,7 @@ services:
     image: villsource/articleservice
     environment:
       - DB_CONNECTION_STRING=mongodb://mongo1:50001/comment?replicaSet=my-mongo-set
+      - MQ_HOST=rabit-mq
     networks:
       - service
     depends_on:
