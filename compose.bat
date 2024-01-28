@@ -34,4 +34,5 @@ docker-compose^
  -f docker-compose.service.image.yml^
  -f docker-compose.service.runner.yml^
  -f docker-compose.slave.runner.yml^
+ -f docker-compose.broker.rabbitMq.yml^
  %1
