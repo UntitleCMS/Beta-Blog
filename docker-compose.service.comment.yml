@@ -7,4 +7,6 @@ services:
         - DB_CONNECTION_STRING=mongodb://mongo1:50001/comment?replicaSet=my-mongo-set
     networks:
         - service
+    depends_on:
+      - mongo1
   

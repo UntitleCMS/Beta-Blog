@@ -8,4 +8,7 @@ services:
         - MQ_CONNECTION_STRING=amqp://guest:guest@rabit-mq:5672
     networks:
         - service
+    depends_on:
+      - mongo1
+      - rabbitmq
   
