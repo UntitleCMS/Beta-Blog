@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   userinfo:
-    image: villsource/userinfo
+    image: ghcr.io/untitlecms/user-information-service:v0
     environment:
         - DB_CONNECTION_STRING=mongodb://mongo1:50001/comment?replicaSet=my-mongo-set
         - MQ_CONNECTION_STRING=amqp://guest:guest@rabit-mq:5672

@@ -3,6 +3,6 @@ version: '3.4'
 services:
 
   frontend:
-    image: villsource/beta-blog:v2
+    image: ghcr.io/untitlecms/web-ui-service:v0
     networks:
       - service

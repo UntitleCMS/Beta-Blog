@@ -3,13 +3,26 @@ version: '3.4'
 services:
 
   coderunnerservice:
-    image: villsource/coderunnerservice
+    image: ghcr.io/untitlecms/code-runner-service:v0
     environment:
-      CODE_REPO: /sourcecodes
-      SLAVE_USER_NAME: runner
-      SLAVE_HOST_PYTHON: python-slave
-      SLAVE_HOST_JAVA: java-slave
-      SLAVE_HOST_GCC: gcc-slave
+      PYTHON_SANDBOX_USER: runner
+      PYTHON_SANDBOX_HOST: python-slave
+      PYTHON_SANDBOX_PORT: 2222
+      PYTHON_SANDBOX_KEY: /keys/id_rsa
+
+      JAVA_SANDBOX_USER: runner
+      JAVA_SANDBOX_HOST: java-slave
+      JAVA_SANDBOX_PORT: 2222
+      JAVA_SANDBOX_KEY: /keys/id_rsa
+
+      GCC_SANDBOX_USER: runner
+      GCC_SANDBOX_HOST: gcc-slave
+      GCC_SANDBOX_PORT: 2222
+      GCC_SANDBOX_KEY: /keys/id_rsa
+
+      LOCAL_CODE_STORAGE: /sourcecodes
+
+      EXECUTION_QUOTA: 10
     volumes:
       - ./CompilerContainer/Keys:/keys
       - ./CompilerContainer/SourceCode:/sourcecodes

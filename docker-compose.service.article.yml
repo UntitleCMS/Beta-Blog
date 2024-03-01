@@ -3,7 +3,7 @@ version: '3.4'
 services:
 
   articleservice:
-    image: villsource/articleservice
+    image: ghcr.io/untitlecms/article-service:v0
     environment:
       - DB_CONNECTION_STRING=mongodb://mongo1:50001/comment?replicaSet=my-mongo-set
       - MQ_HOST=rabit-mq

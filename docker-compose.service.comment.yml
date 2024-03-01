@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   commentservice:
-    image: villsource/commentservice
+    image: ghcr.io/untitlecms/comment-service:v0
     environment:
         - DB_CONNECTION_STRING=mongodb://mongo1:50001/comment?replicaSet=my-mongo-set
     networks:

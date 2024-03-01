@@ -3,7 +3,7 @@ version: '3.4'
 services:
 
   picturestorageservice:
-    image: villsource/picturestorageservice
+    image: ghcr.io/untitlecms/picture-storage-service:v0
     environment:
       DB_CONNECTION_STRING: mongodb://mongo1:50001/pictures?replicaSet=my-mongo-set
       ASPNETCORE_URLS: http://+:80

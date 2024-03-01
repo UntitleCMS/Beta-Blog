@@ -3,7 +3,7 @@ version: '3.4'
 services:
 
   gateway:
-    image: villsource/gateway
+    image: ghcr.io/untitlecms/gateway:v0
     networks:
       - service 
     environment:
