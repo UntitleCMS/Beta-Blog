@@ -14,6 +14,8 @@ services:
       - ./CompilerContainer/SourceCode:/config/sourcecode
     networks:
       - runner
+    dns:
+      - 1.2.3.4
 
   java-slave:
     image: java-slave
@@ -27,6 +29,8 @@ services:
       - ./CompilerContainer/SourceCode:/config/sourcecode
     networks:
       - runner
+    dns:
+      - 1.2.3.4
 
   gcc-slave:
     image: gcc-slave
@@ -39,4 +43,6 @@ services:
       - ./CompilerContainer/Keys:/config/.ssh
       - ./CompilerContainer/SourceCode:/config/sourcecode
     networks:
-    - runner
+      - runner
+    dns:
+      - 1.2.3.4
