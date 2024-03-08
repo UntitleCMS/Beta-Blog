@@ -9,3 +9,4 @@ services:
       - 5672:5672
     networks:
       - service
+    restart: always

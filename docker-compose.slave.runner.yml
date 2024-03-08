@@ -16,6 +16,7 @@ services:
       - runner
     dns:
       - 1.2.3.4
+    restart: always
 
   java-slave:
     image: java-slave
@@ -31,6 +32,7 @@ services:
       - runner
     dns:
       - 1.2.3.4
+    restart: always
 
   gcc-slave:
     image: ghcr.io/untitlecms/gcc-sandbox:v0
@@ -41,3 +43,4 @@ services:
       - runner
     dns:
       - 1.2.3.4
+    restart: always

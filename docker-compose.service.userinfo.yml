@@ -11,4 +11,5 @@ services:
     depends_on:
       - mongo1
       - rabit-mq
+    restart: always
   

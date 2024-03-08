@@ -13,6 +13,7 @@ services:
     networks:
       - service
     user: root
+    restart: always
 
 volumes:
   sql-server:

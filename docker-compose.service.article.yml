@@ -11,3 +11,4 @@ services:
       - service
     depends_on:
       - mongo1
+    restart: always

@@ -6,3 +6,4 @@ services:
     image: ghcr.io/untitlecms/web-ui-service:v0
     networks:
       - service
+    restart: always

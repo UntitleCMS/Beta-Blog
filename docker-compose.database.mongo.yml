@@ -17,3 +17,4 @@ services:
     command: bash /scripts/endpoint.sh
     networks:
       - service
+    restart: always

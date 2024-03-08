@@ -12,3 +12,4 @@ services:
       - service
     depends_on:
       - sql-server
+    restart: always
