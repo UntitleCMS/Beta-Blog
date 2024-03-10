@@ -10,7 +10,10 @@
       ],
       "DownstreamPathTemplate": "/{url}",
       "UpstreamPathTemplate": "/api/runner/v1/{url}",
-      "UpstreamHttpMethod": [ "GET", "POST" ]
+      "UpstreamHttpMethod": ["GET", "POST"],
+      "UpstreamHeaderTransform": {
+        "X-Forwarded-For": "{RemoteIpAddress}"
+      }
     }
   ]
 }
